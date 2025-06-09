@@ -83,9 +83,6 @@ Módulo datetime (embora não utilizado ainda, está disponível para futuras me
 
 
 🚀 Melhorias Futuras
-Persistência de dados com arquivos ou banco de dados.
-
-Interface gráfica com Tkinter ou Flask.
 
 Sistema de login com autenticação.
 
