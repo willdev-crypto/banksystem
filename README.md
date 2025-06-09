@@ -52,6 +52,8 @@ Menu do Sistema Bancário (após login):
 
 [q] Sair da conta bancária
 
+
+
 🔐 Regras de Negócio
 Cada CPF só pode ser cadastrado uma vez.
 
@@ -61,25 +63,45 @@ Os saques são limitados a 3 por sessão e até R$ 500,00 por operação.
 
 O extrato mostra apenas as transações feitas na sessão atual.
 
+
+
 🧪 Exemplo de Uso
 text
+
 Copiar
+
 Editar
+
 Bem-vindo(a) ao Bank System!
+
 [c] Criar Usuário
+
 [v] CPF Cadastrado
+
 [e] Ver Conta e detalhes
+
 [q] Sair
+
 Escolha uma opção: c
+
 Nome: João Silva
+
 Data de Nascimento (dd/mm/aaaa): 01/01/1990
+
 CPF (apenas números): 12345678900
+
 Endereço (logradouro, número, cidade/estado): Rua A, 123, SP/SP
+
 Usuário criado com sucesso!
-🛠 Tecnologias Utilizadas
+
+
+🛠 Tecnologias Utilizadas:
 Python 3
 
+
+
 Módulo datetime (embora não utilizado ainda, está disponível para futuras melhorias).
+
 
 
 🚀 Melhorias Futuras
