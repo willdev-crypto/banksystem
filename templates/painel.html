@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="mb-3">Olá, {{ usuario['nome'] }}!</h2>
+    <p><strong>CPF:</strong> {{ usuario['cpf'] }}</p>
+    <p><strong>Endereço:</strong> {{ usuario['endereco'] }}</p>
+    <p><strong>Data de Nascimento:</strong> {{ usuario['data_nascimento'] }}</p>
+
+    <a href="{{ url_for('logout') }}" class="btn btn-danger mt-3">Sair</a>
+    <a href="{{ url_for('operacoes') }}" class="btn btn-success mt-3">Acessar Conta</a>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
