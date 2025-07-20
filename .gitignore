@@ -3,3 +3,4 @@ __pycache__/
 usuarios.json
 movimentacoes.json
 .env
+.vscode/
