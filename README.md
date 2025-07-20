@@ -1,121 +1,68 @@
-# 🏦 Bank System - Sistema Bancário em Python
+# 🏦 Bank System - Sistema Bancário em Python (Flask)
 
-Este projeto é um sistema bancário simples desenvolvido em Python, que permite a criação de usuários, contas bancárias, realização de depósitos, saques e emissão de extrato. O sistema simula funcionalidades básicas de um banco com operações por terminal.
+Este projeto é um sistema bancário simples desenvolvido em Python com Flask, permitindo cadastro de usuários, contas bancárias, depósitos, saques, extrato completo e painel administrativo. O sistema simula funcionalidades básicas de um banco, agora com interface web.
 
 ## 📋 Funcionalidades
 
-- Cadastro de usuários com validação de CPF único.
-- Criação de contas bancárias vinculadas a usuários.
-- Verificação de CPF cadastrado.
-- Depósitos com validação de valor.
-- Saques com limite diário e por valor.
-- Emissão de extrato bancário com histórico de transações.
-- Interface por terminal com menus interativos.
+- Cadastro de usuários com validação de CPF único e e-mail obrigatório
+- Criação automática de agência e conta corrente
+- Login seguro com senha criptografada
+- Recuperação de senha por e-mail (simulada)
+- Depósitos via boleto bancário (simulado)
+- Saques com confirmação de senha e valor mínimo de R$ 0,01
+- Emissão de extrato bancário completo com data e hora das movimentações
+- Painel do usuário: saldo, agência, conta e extrato
+- Painel do administrador: visualização de todos os usuários e saldos
+- Apenas um usuário administrador permitido
+- Interface web responsiva com Bootstrap
 
 ## 🧱 Estrutura do Sistema
 
-- **Usuários:** Armazenados em memória com nome, data de nascimento, CPF e endereço.
-- **Contas:** Vinculadas a usuários, com número sequencial e agência padrão.
-- **Operações Bancárias:**
-  - **Depósito:** Aceita valores positivos.
-  - **Saque:** Limite de 3 saques por sessão, até R$ 500,00 por operação.
-  - **Extrato:** Exibe todas as movimentações realizadas e o saldo atual.
+- **Usuários:** Armazenados em `usuarios.json` (não enviado ao GitHub), com nome, data de nascimento, CPF, endereço, e-mail, senha (hash), agência, conta, saldo e tipo (admin ou comum).
+- **Movimentações:** Armazenadas em `movimentacoes.json` (não enviado ao GitHub), com CPF, tipo, valor, data e hora.
+- **Templates:** HTML com Bootstrap, localizados em `templates/`.
+- **Arquivos estáticos:** CSS, JS e imagens em `static/`.
 
 ## ▶️ Como Usar
 
-1. **Execute o script `main()`**
+1. **Clone o repositório:**
    ```bash
-   interface.py
-Menu Principal:
+   git clone https://github.com/willdev-crypto/banksystem.git
+   cd banksystem
+   ```
 
-[c] Criar Usuário
+2. **Instale as dependências:**
+   ```bash
+   pip install flask werkzeug
+   ```
 
-[v] Verificar se CPF está cadastrado
+3. **Execute o sistema:**
+   ```bash
+   python app.py
+   ```
+   Acesse [http://127.0.0.1:5000](http://127.0.0.1:5000) no navegador.
 
-[e] Entrar no sistema bancário (com CPF)
+## 🔐 Segurança
 
-[q] Sair
+- Senhas são armazenadas apenas como hash.
+- Arquivos `usuarios.json` e `movimentacoes.json` estão no `.gitignore` e **não são enviados ao GitHub**.
+- Nunca compartilhe dados sensíveis publicamente.
 
-Menu do Sistema Bancário (após login):
+## 🚀 Melhorias Futuras
 
-[a] Criar nova conta
+- Integração com banco de dados relacional (MySQL/PostgreSQL)
+- Envio real de e-mail para recuperação de senha
+- Relatórios financeiros em PDF
+- API RESTful para integração com outros sistemas
 
-[l] Listar contas cadastradas
+## 👤 Autor
 
-[u] Listar todos os usuários
-
-[d] Realizar depósito
-
-[s] Realizar saque
-
-[e] Ver extrato
-
-[q] Sair da conta bancária
-
-
-
-🔐 Regras de Negócio
-Cada CPF só pode ser cadastrado uma vez.
-
-Cada conta criada é automaticamente vinculada ao CPF informado.
-
-Os saques são limitados a 3 por sessão e até R$ 500,00 por operação.
-
-O extrato mostra apenas as transações feitas na sessão atual.
-
-
-
-🧪 Exemplo de Uso
-text
-
-Copiar
-
-Editar
-
-Bem-vindo(a) ao Bank System!
-
-[c] Criar Usuário
-
-[v] CPF Cadastrado
-
-[e] Ver Conta e detalhes
-
-[q] Sair
-
-Escolha uma opção: c
-
-Nome: João Silva
-
-Data de Nascimento (dd/mm/aaaa): 01/01/1990
-
-CPF (apenas números): 12345678900
-
-Endereço (logradouro, número, cidade/estado): Rua A, 123, SP/SP
-
-Usuário criado com sucesso!
-
-
-🛠 Tecnologias Utilizadas:
-Python 3
-
-
-
-Módulo datetime (embora não utilizado ainda, está disponível para futuras melhorias).
-
-
-
-🚀 Melhorias Futuras
-
-Sistema de login com autenticação.
-
-Implementação de histórico completo por usuário/conta.
-
-👤 Autor:
-
-William Oliveira
-
-Desenvolvedor Front-End & Analista de Sistemas
-
+William Oliveira  
+Desenvolvedor Python & Front-End  
 📧 wil.dgl@hotmail.com
+
+---
+
+> Projeto educacional. Não utilize em produção real sem adaptações de segurança!
 
 
