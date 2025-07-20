@@ -1,0 +1,46 @@
+[
+    {
+        "nome": "eliane francisca da saurus",
+        "data_nascimento": "1981-08-09",
+        "cpf": "7777777777",
+        "endereco": "rua sete",
+        "senha": "scrypt:32768:8:1$wrsjMi63Yl2RL1kG$97c0fa93bf8a1769a8223035a686db99ffe5eaa581d1e6c461bde954ed26636f001fc8c9d483dac142c8006c6391623be6e5b94da1c9f101d15addf66710bde3",
+        "admin": false
+    },
+    {
+        "nome": "joao gomes",
+        "data_nascimento": "1981-12-09",
+        "cpf": "12345678910",
+        "endereco": "rua 5",
+        "senha": "scrypt:32768:8:1$FstjJPqqDHs6ufJl$ce9ae6030e0190944d3469950c2f226959188979b7785bc9d001c72493af04aa08d89de3b6169d67e9ab8415c04da651eb3b16d00db0184725068c30875ff11a",
+        "admin": false
+    },
+    {
+        "nome": "William Oliveira",
+        "data_nascimento": "1991-02-17",
+        "cpf": "00990099990",
+        "endereco": "rua um  parque dos remedios",
+        "senha": "scrypt:32768:8:1$nYol8GtTqsW33Uu8$531809f3e7885b09948bd74e4ed7b0e3dfab674a71939c5ae7e730190306e0fa68901700e95b1c923fca4e04231858712aa49abab89a3f07302a2031ee64ac60",
+        "admin": true
+    },
+    {
+        "nome": "Doom MF",
+        "data_nascimento": "1991-02-25",
+        "cpf": "09876543211",
+        "endereco": "Avenida paulista 229",
+        "senha": "scrypt:32768:8:1$sAwQ54yScHOaymWX$01bb24928a751f616431663830ed2cc4cbc9080ccbac97a820e820f54b9f77179eac50b9b0712c9c65fd98eac8de302f67e1929b5499582f057ca2b39c40f25b",
+        "admin": false
+    },
+    {
+        "nome": "Breno SIlva",
+        "data_nascimento": "1992-08-07",
+        "cpf": "09999999999",
+        "endereco": "Avenida Direitos Humanos 20 ",
+        "email": "mudar@hotmail.com",
+        "senha": "scrypt:32768:8:1$JmhoPUtIPtao8lRX$4085513e741dc4dec66c4b941ae872165f3ec4d31dfbe9b721b7d3596d402036fae43f5cac1a345b6ac6a1b1df320b3c0e859fc17a780a1cd9aea286a5ff9b34",
+        "admin": false,
+        "agencia": "0001",
+        "conta": "1238-9",
+        "saldo": 0.0
+    }
+]

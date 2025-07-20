@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Painel do Usuário{% endblock %}
+
+{% block content %}
+<h2>Painel do Usuário</h2>
+<p><strong>Bem-vindo, {{ usuario.nome }}!</strong></p>
+<p><strong>Conta:</strong> Agência {{ usuario.agencia }} - Conta {{ usuario.conta }}</p>
+<p><strong>Saldo:</strong> R$ {{ usuario.saldo }}</p>
+
+<h4 class="mt-4">Extrato</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Operação</th>
+            <th>Valor (R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for op in extrato %}
+        <tr>
+            <td>{{ op.data_hora }}</td>
+            <td>{{ op.tipo }}</td>
+            <td>{{ op.valor }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

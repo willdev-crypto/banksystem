@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Operações Bancárias{% endblock %}
+
+{% block content %}
+<h2>Operações Bancárias</h2>
+<p><strong>Bem-vindo, {{ usuario.nome }}!</strong></p>
+<p><strong>Saldo atual:</strong> R$ {{ usuario.saldo }}</p>
+
+<h4 class="mt-4">Fazer uma operação</h4>
+<form method="post">
+    <div class="mb-2">
+        <select name="tipo" class="form-select" required>
+            <option value="" disabled selected>Selecione uma operação</option>
+            <option value="deposito">Depósito</option>
+            <option value="saque">Saque</option>
+        </select>
+    </div>
+    <div class="mb-2">
+        <input type="number" step="0.01" min="0.01" class="form-control" name="valor" placeholder="Valor" required>
+    </div>
+    <div class="mb-2">
+        <input type="password" class="form-control" name="senha_saque" placeholder="Senha (obrigatório para saque)">
+    </div>
+    <button type="submit" class="btn btn-success">Confirmar</button>
+</form>
+
+<h4 class="mt-5">Extrato</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Operação</th>
+            <th>Valor (R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for op in extrato %}
+        <tr>
+            <td>{{ op.data_hora }}</td>
+            <td>{{ op.tipo }}</td>
+            <td>{{ op.valor }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

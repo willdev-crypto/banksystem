@@ -1,0 +1,17 @@
+[
+    {
+        "cpf": "39666162890",
+        "tipo": "deposito",
+        "valor": 0.1
+    },
+    {
+        "cpf": "39666162890",
+        "tipo": "deposito",
+        "valor": 0.19
+    },
+    {
+        "cpf": "39666162890",
+        "tipo": "saque",
+        "valor": 9.0
+    }
+]

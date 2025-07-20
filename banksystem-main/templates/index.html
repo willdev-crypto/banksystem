@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Bem-vindo ao Bank System</h1>
+<div class="text-center mt-4">
+    <a href="{{ url_for('login') }}" class="btn btn-primary me-2">Login</a>
+    <a href="{{ url_for('cadastro') }}" class="btn btn-secondary">Cadastro</a>
+</div>
+{% endblock %}
